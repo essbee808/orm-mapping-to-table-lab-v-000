@@ -22,7 +22,7 @@ class Student
   end
   
   def self.drop_table
-    binding.pry
+  
   end
   
   def self.save
