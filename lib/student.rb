@@ -34,6 +34,7 @@ class Student
         VALUES (?, ?)
         SQL
     DB[:conn].execute(sql, self.name, self.grade)
+    #grab the ID of the row just inserted into the database and assign it to the value of @id attribute of this instance
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
   end
   
